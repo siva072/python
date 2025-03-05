@@ -1,0 +1,91 @@
+*   how to connect azure databrics in azure documentation?
+
+       1. Go to Microsoft learn
+
+       2. click on Browse all training
+ 
+       3. select data engineering and learning path
+
+       4.click on Implement a data lake house analytics solution with Azure Databricks ...... --module
+
+            link:     https://learn.microsoft.com/en-us/training/paths/data-engineer-azure-databricks/
+
+
+
+
+* connect to files from databrics to adls:
+
+               === abfss://source@internsstorage1.dfs.core.windows.net/sivakrishna/
+
+
+
+* how to write sql queries on RDD and DATAFRAMES 
+
+              1. Spark SQL
+
+* what is PySpark?
+      
+       PySpark is a PYTHON interface for spark. PySpark is made by using PY4J library. Actually what spark is processing large data or BIG-DATA
+
+*  components of spark:
+
+        1.RDD             -- 
+        2.DATA FRAMES     -- frame into tables for given data
+        3.SPARK SQL       -- querying on RDD's and DATAFRAMES
+        4.ML LIB          -- data processing for ML models 
+        5.SPARK STREAMING -- data processing in live streaming data
+
+* Apache spark is used for both batch and real-time processing . Apache Hadoop is used for batch processing only
+
+
+
+
+* Azure Databricks also supports SQL by allowing to switch between Data Frame operations and SQL queries to interact with the data in a way that feels most natural.
+
+       To filter the Data Frame using a SQL query, you first create a temporary view or global temp view:
+
+                df.createOrReplaceTempView("people")
+
+                sql_df  = spark.sql("SELECT Name, Age FROM people WHERE Age > 30")
+
+
+
+* we can use shell commands on databrics just by typing %sh
+
+
+
+* use the spark.Sql library to embed Spark SQL syntax within your Python code and query the view and return the results as a data frame.
+ 
+
+
+* The %pyspark line at the beginning is called a magic.
+
+
+
+* we can convert data frames to sql tables vice versa
+
+
+
+* how to create dataframe to sql table 
+
+          df.createOrReplaceTempView("name of table you like") 
+
+
+* https://learn.microsoft.com/en-us/azure/databricks/getting-started/dataframes
+
+
+* /databrics-datasets/learning-spark-v2/sf-fire/sf-fire-calls.csv  : file path for practicing on databrics
+
+
+
+* Apache Spark
+Diagram representing an Apache Spark cluster.
+
+Apache Spark is a parallel processing framework that takes advantage of in-memory processing and a distributed file storage. It's a common open-source software (OSS) tool for big data scenarios.
+
+Data engineers need to be proficient with Spark, using notebooks and other code artifacts to process data in a data lake and prepare it for modeling and analysis.
+
+
+
+
+
